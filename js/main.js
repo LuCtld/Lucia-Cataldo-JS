@@ -31,21 +31,20 @@ const listadoParafinas = [ parafinaBase, parafinaSummer, parafinaWinter, parafin
 // Funcion
 
 let quecompra = prompt ("Hola! que parafina querés comprar? Base, Summer, Winter, Ultra ");
-let quecantidad = prompt ("Cuántas querés comprar?");
 const comprafinal = [];
 
-function compra (quecompra, quecantidad){    
+function compra (quecompra){    
     for (let i = 0; i < 5; i++){  
         if (quecompra.toLowerCase() == listadoParafinas[i].nombre){
+            let quecantidad = prompt ("Cuántas querés comprar?");
             let preciofinal = quecantidad * listadoParafinas[i].precio;
             console.log  (preciofinal);   
             alert ("El costo de" + " " + quecantidad +" "+ "pack/s es $" + preciofinal);
 
             let concretaCompra = prompt ("Agregar al carrito?");
             
-
             if (concretaCompra.toLowerCase() === "si"){
-            
+        
                 function agregaralcarrito (listadoParafinas){
                     comprafinal.push (listadoParafinas[i].nombre);
                     console.log  (comprafinal);   
@@ -55,10 +54,13 @@ function compra (quecompra, quecantidad){
             else {
                 alert ("ok! la proxima vez será! te esperamos :)")
             }
-
             agregaralcarrito (listadoParafinas);
         }   
+        else {
+            alert ("No es un producto valido")
+        }
     }
+
 }
-compra (quecompra, quecantidad);
+compra (quecompra);
 
