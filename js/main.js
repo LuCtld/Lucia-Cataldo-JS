@@ -38,6 +38,8 @@ function compra (quecompra){
         if (quecompra.toLowerCase() == listadoParafinas[i].nombre){
             let quecantidad = prompt ("Cuántas querés comprar?");
             let preciofinal = quecantidad * listadoParafinas[i].precio;
+            console.log  (quecompra);
+            console.log (quecantidad);
             console.log  (preciofinal);   
             alert ("El costo de" + " " + quecantidad +" "+ "pack/s es $" + preciofinal);
 
@@ -54,12 +56,16 @@ function compra (quecompra){
 
                         if (comoabona.toLowerCase() == "efectivo"){
                             let preciocondescuento = preciofinal - preciofinal *(20/100);
+                            console.log (comoabona);
+                            console.log (preciocondescuento);
                             alert ("El precio final de su compra es $" + preciocondescuento + " " + "Gracias! vuelva pronto :)");
                         }
                         else if  (comoabona.toLowerCase() == "cuotas"){
                             let precioconrecargo = preciofinal + preciofinal *(10/100);
+                            console.log (comoabona);
+                            console.log (precioconrecargo);
                             alert ("El precio final de su compra es $" + precioconrecargo + " " + "Gracias! vuelva pronto :)");
-
+                    
                         }  
                     }
             }
