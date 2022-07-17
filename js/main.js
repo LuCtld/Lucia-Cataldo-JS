@@ -32,6 +32,7 @@ const listadoParafinas = [ parafinaBase, parafinaSummer, parafinaWinter, parafin
 
 let quecompra = prompt ("Hola! que parafina querés comprar? Base, Summer, Winter, Ultra ");
 const comprafinal = [];
+const cantidadDeCuotas = [3, 6, 12];
 
 function compra (quecompra){    
     for (let i = 0; i < 5; i++){  
@@ -44,6 +45,7 @@ function compra (quecompra){
             alert ("El costo de" + " " + quecantidad +" "+ "pack/s es $" + preciofinal);
 
             let concretaCompra = prompt ("Agregar al carrito?");
+            console.log (concretaCompra);
             
             if (concretaCompra.toLowerCase() === "si"){
         
@@ -60,15 +62,15 @@ function compra (quecompra){
                             console.log (preciocondescuento);
                             alert ("El precio final de su compra es $" + preciocondescuento + " " + "Gracias! vuelva pronto :)");
                         }
-                        else if  (comoabona.toLowerCase() == "cuotas"){
+                        else if  (comoabona.toLowerCase() == "cuotas"){                          
                             let precioconrecargo = preciofinal + preciofinal *(10/100);
                             console.log (comoabona);
                             console.log (precioconrecargo);
-                            alert ("El precio final de su compra es $" + precioconrecargo + " " + "Gracias! vuelva pronto :)");
+                            alert ("El precio final de su compra es $" + precioconrecargo + " " + "Gracias! ");
                     
-                        }  
-                    }
-            }
+                            }  
+                        }
+                }
             else {
                 alert ("ok! la proxima vez será! te esperamos :)")
             }  
