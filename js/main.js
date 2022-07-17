@@ -48,19 +48,28 @@ function compra (quecompra){
                 function agregaralcarrito (listadoParafinas){
                     comprafinal.push (listadoParafinas[i].nombre);
                     console.log  (comprafinal);   
-                    alert ("Se agregó" + " " + listadoParafinas[i].nombre + " " + "al carrito")
-                }           
-            } 
+                    alert ("Se agregó" + " " + listadoParafinas[i].nombre + " " + "al carrito");
+        
+                    let comoabona = prompt ("Efectivo (descuento del 20%) o Cuotas (Recargo del 10%) ?");
+
+                        if (comoabona.toLowerCase() == "efectivo"){
+                            let preciocondescuento = preciofinal - preciofinal *(20/100);
+                            alert ("El precio final de su compra es $" + preciocondescuento + " " + "Gracias! vuelva pronto :)");
+                        }
+                        else if  (comoabona.toLowerCase() == "cuotas"){
+                            let precioconrecargo = preciofinal + preciofinal *(10/100);
+                            alert ("El precio final de su compra es $" + precioconrecargo + " " + "Gracias! vuelva pronto :)");
+
+                        }  
+                    }
+            }
             else {
                 alert ("ok! la proxima vez será! te esperamos :)")
-            }
-            agregaralcarrito (listadoParafinas);
-        }   
-        else {
-            alert ("No es un producto valido")
-        }
-    }
-
+            }  
+            agregaralcarrito (listadoParafinas);         
+        } 
+        
+    }  
 }
-compra (quecompra);
 
+compra (quecompra);
