@@ -71,8 +71,8 @@ function compra (quecompra){
                             }  
                         }
                 }
-            else {
-                alert ("ok! la proxima vez será! te esperamos :)")
+                else {
+                    alert ("ok! la proxima vez será! te esperamos :)")
             }  
             agregaralcarrito (listadoParafinas);         
         } 
